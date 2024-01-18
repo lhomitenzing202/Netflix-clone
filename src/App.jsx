@@ -1,16 +1,22 @@
 
 import './App.css'
-import requests from './Request'
-import Row from './Row'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 
 function App() {
-  
-
   return (
     <>
-     <h1> Hello world</h1>
-   <Row title = "Netflix Originals" fetchUrl={requests.fetchNetflixOriginals}/>
-   <Row title="Trending Now" fetchUrl={requests.fetchTrending}/>
+    <h1>HELLO WORLD</h1>
+    <BrowserRouter>
+    <Routes>
+      <Route />
+     
+    </Routes>
+    </BrowserRouter>
+     
+
+   {/* <Row title = "Netflix Originals" fetchUrl={requests.fetchNetflixOriginals}/>
+   <Row title="Trending Now" fetchUrl={requests.fetchTrending}/> */}
     </>
   )
 }
