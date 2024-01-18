@@ -1,23 +1,13 @@
 
-import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-
-function App() {
+const App = () => {
   return (
-    <>
-    <h1>HELLO WORLD</h1>
-    <BrowserRouter>
-    <Routes>
-      <Route />
-     
-    </Routes>
-    </BrowserRouter>
-     
-
-   {/* <Row title = "Netflix Originals" fetchUrl={requests.fetchNetflixOriginals}/>
-   <Row title="Trending Now" fetchUrl={requests.fetchTrending}/> */}
-    </>
+    <div className="uppercase"> Netflix
+    <h1 className="font-nsans-light">Netflix</h1>
+    <h1 className="">Netflix</h1>
+    <h1 className="font-nsans-light">Netflix</h1>
+    <h1 className="font-nsans-bold">Netflix</h1>
+    </div>  
   )
 }
 
