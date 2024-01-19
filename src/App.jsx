@@ -1,13 +1,21 @@
-
+import { Route, Routes } from "react-router-dom"
+import Home from "./Pages/Home"
+import Login from "./Pages/Login"
+import Profile from "./Pages/Profile"
+import Signup from "./Pages/Signup"
+import Navbar from "./Components/Navbar"
 
 const App = () => {
   return (
-    <div className="uppercase"> Netflix
-    <h1 className="font-nsans-light">Netflix</h1>
-    <h1 className="">Netflix</h1>
-    <h1 className="font-nsans-light">Netflix</h1>
-    <h1 className="font-nsans-bold">Netflix</h1>
-    </div>  
+<>
+<Navbar/>
+<Routes>
+  <Route path="/" element={<Home/>}/>
+  <Route path="/login" element={<Login/>}/>
+  <Route path="/signup" element={<Signup/>}/>
+  <Route path="/Profile" element={<Profile/>}/>
+</Routes>
+</>    
   )
 }
 
