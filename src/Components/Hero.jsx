@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import endpoints from "../Services/Movieservices";
+import endpoints, { CreateImageUrl } from "../Services/Movieservices";
 
 const Hero = () => {
   const [movie, setMovie] = useState(null);
@@ -39,7 +39,7 @@ const Hero = () => {
           {backdrop_path && (
             <><img
             className="w-full h-full object-cover object-top"
-            src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
+            src={CreateImageUrl(backdrop_path, "original")}
             alt={title} />
             <div className="absolute w-full top-[10%] lg:top-[25%] p-4 md:p-8">
               <h1 className="text-3xl md:text-6xl font-nsans-bold">{title}</h1>
