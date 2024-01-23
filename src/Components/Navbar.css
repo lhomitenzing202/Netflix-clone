@@ -1,0 +1,59 @@
+.navbar {
+    background-color: #000;
+    /* Set your desired background color */
+    color: #fff;
+    /* Set your desired text color */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Logo styles */
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+    /* Set your desired font size */
+}
+
+
+/* Button styles */
+
+.navbar button {
+    background-color: #e50914;
+    /* Set your desired button background color */
+    color: #fff;
+    /* Set your desired button text color */
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    /* Adjust spacing between buttons */
+    cursor: pointer;
+    font-size: 16px;
+    /* Set your desired button font size */
+}
+
+
+/* Remove default button styles */
+
+.navbar button:focus {
+    outline: none;
+}
+
+
+/* Adjust button styles on hover */
+
+.navbar button:hover {
+    background-color: #ff3d26;
+    /* Set your desired hover background color */
+}
+
+
+/* Adjust link styles */
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
