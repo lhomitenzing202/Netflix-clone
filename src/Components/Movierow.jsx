@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
+import Movieitems from "./Movieitems";
 
 
 // eslint-disable-next-line react/prop-types
@@ -23,7 +24,7 @@ const Movierow = ({title, url}) => {
 
     {movie.map((movie)=>(
     <>
-    <h1>{movie.title}</h1>
+    <Movieitems key={movie.id} movie={movie}/>
     </>
     ))}
    </div>
