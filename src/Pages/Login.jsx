@@ -48,7 +48,7 @@ const Login = () => {
                   type="checkbox" 
                   className="mr-2"
                   checked={rememberLoign}
-                  onChange={() => setRememberLogin(!rememberLoign)}
+                  onChange={(e) => setRememberLogin(!rememberLoign)}
                   />
                   Remember me
                 </p>
