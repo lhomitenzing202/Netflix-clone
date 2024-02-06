@@ -32,6 +32,7 @@ export function AuthContextProvider({Children}){
 
 
     return
+       // eslint-disable-next-line no-unreachable
        <AuthContext.Provider value={{user,signUp,login,logOut}}>{Children}</AuthContext.Provider>;
 }
 export function UserAuth(){
