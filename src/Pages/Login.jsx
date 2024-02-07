@@ -1,15 +1,25 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { UserAuth } from "../Context/AuthContext";
 
 const Login = () => {
     const[rememberLoign, setRememberLogin]= useState(true);
   const[email, setEmail]= useState('');
   const[password, setPassword]= useState('');
 
-  const handleFormSubmit=(e)=>{
+  // eslint-disable-next-line no-unused-vars
+  const {user, logIn} = UserAuth()
+  const navigate = useNavigate();
+
+  const handleFormSubmit= async (e)=>{
     e.preventDefault();
-    console.log(email);
-    console.log(password);
+
+    try{
+      await logIn(email, password);
+      navigate("/");
+    }catch(err){
+      console.log(err);
+    }
   }
   return (
     <>

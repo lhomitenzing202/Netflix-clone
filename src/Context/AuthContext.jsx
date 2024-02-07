@@ -1,6 +1,7 @@
 
 import {createContext, useContext, useEffect, useState } from 'react'
 import{createUserWithEmailAndPassword, signInWithEmailAndPassword,signOut, onAuthStateChanged} from 'firebase/auth'
+// eslint-disable-next-line no-unused-vars
 import{auth, db} from '../Services/Firebase'
 
 
