@@ -1,9 +1,13 @@
 
 import {createContext, useContext, useEffect, useState } from 'react'
-import{createUserWithEmailAndPassword, signInWithEmailAndPassword,signOut, onAuthStateChanged} from 'firebase/auth'
-// eslint-disable-next-line no-unused-vars
+import{
+    createUserWithEmailAndPassword, 
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged
+} from 'firebase/auth'
 import{auth, db} from '../Services/Firebase'
-
+import {doc,setdoc} from 'firebase/firestore'
 
 const AuthContext = createContext();
 
@@ -21,6 +25,9 @@ export function AuthContextProvider({Children}){
 
     function signUp(email, password){
         createUserWithEmailAndPassword(auth, email,password);
+        setdoc(doc(db, "users", email),{
+            favShows:[],
+        });
     }
 
     function login(email, password){

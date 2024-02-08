@@ -6,7 +6,15 @@ const Navbar = () => {
 
   const {user, logout}=UserAuth();
   const navigate = useNavigate();
-
+  
+  const handleLogout = async()=>{
+    try{
+      await logout();
+      navigate("/");
+    } catch(err){
+      console.log(err);
+    }
+  };
   return (
 
    <div className="absolute w-full p-4 flex items-center justify-between z-50">
@@ -24,7 +32,7 @@ const Navbar = () => {
       </Link>
   
         
-         <button className="capitalize bg-red-700 px-6 py-2 rounded cursor-pointer">Logout</button>
+         <button onClick={handleLogout} className="capitalize bg-red-700 px-6 py-2 rounded cursor-pointer">Logout</button>
         
       </div> 
     ):(
